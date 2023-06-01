@@ -1,29 +1,37 @@
 <html>
   <div id="sandbox" style="height:100vh">
     <ul style="font-size: xxx-large">
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
-      <li>scrollable</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
   </div>
   <script>
-    window.onresize = ()=>console.log("resized");
+    window.onresize = displaySize;
     const listItems = document.querySelectorAll( "li" );
-    console.log( listItems );
     const sandbox = document.getElementById( "sandbox" );
-    console.log( sandbox.getBoundingClientRect().height );
+    console.log(  );
+    
+    function displaySize() {
+      listItems.map( toShowSize );
+    }
+    
+    function toShowSize( element, _index, _array ) {
+      const height = sandbox.getBoundingClientRect().height;
+      element.innerText = "Viewport height is " + height;
+    }
   </script>
 </html>
