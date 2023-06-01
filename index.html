@@ -1,6 +1,6 @@
 <html>
   <div style="display:flex">
-  <span style="height:100vh; width:33vw">
+  <span id="vh" style="height:100vh; width:33vw">
     <ul class="scrollable" style="font-size: xxx-large">
       <li></li>
       <li></li>
@@ -144,17 +144,33 @@
   </div>
   <script>
     window.onresize = displaySize;
-    const listItems = document.querySelectorAll( "li" );
-    const sandbox = document.getElementById( "sandbox" );
+    const vhList = document.querySelectorAll( "#vh li" );
+    const lvhList = document.querySelectorAll( "#lvh li" );
+    const svhList = document.querySelectorAll( "#svh li" );
+    const vh = document.getElementById( "vh" );
+    const lvh = document.getElementById( "lvh" );
+    const svh = document.getElementById( "svh" );
     displaySize();
     
     function displaySize() {
-      listItems.forEach( mapToSize );
+      vhList.forEach( mapToVh );
+      lvhList.forEach( mapToLvh );
+      svhList.forEach( mapToSvh );
     }
     
-    function mapToSize( element, _index, _array ) {
-      const height = sandbox.getBoundingClientRect().height;
+    function mapToVh( element, _index, _array ) {
+      const height = vh.getBoundingClientRect().height;
       element.innerText = "Viewport height is " + height;
+    }
+    
+    function mapToLvh( element, _index, _array ) {
+      const height = lvh.getBoundingClientRect().height;
+      element.innerText = "Large viewport height is " + height;
+    }
+    
+    function mapToSvh( element, _index, _array ) {
+      const height = svh.getBoundingClientRect().height;
+      element.innerText = "Small viewport height is " + height;
     }
   </script>
 </html>
