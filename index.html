@@ -143,7 +143,8 @@
   </span>
   </div>
   <script>
-    window.onresize = displaySize;
+    //window.onresize = displaySize;
+    addEventListener( "onscroll", ()=>console.log("scrolled") );
     const vhList = document.querySelectorAll( "#vh li" );
     const lvhList = document.querySelectorAll( "#lvh li" );
     const svhList = document.querySelectorAll( "#svh li" );
