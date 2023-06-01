@@ -1,6 +1,6 @@
 <html>
   <div id="sandbox" style="height:100vh">
-    <ul>
+    <ul style="font-size: xxx-large">
       <li>scrollable</li>
       <li>scrollable</li>
       <li>scrollable</li>
@@ -21,6 +21,6 @@
   </div>
   <script>
     const sandbox = document.getElementById( "sandbox" );
-    console.log( sandbox );
+    console.log( sandbox.getBoundingClientRect().height );
   </script>
 </html>
