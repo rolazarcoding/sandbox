@@ -26,10 +26,10 @@
     displaySize();
     
     function displaySize() {
-      listItems.map( toShowSize );
+      listItems.forEach( mapToSize );
     }
     
-    function toShowSize( element, _index, _array ) {
+    function mapToSize( element, _index, _array ) {
       const height = sandbox.getBoundingClientRect().height;
       element.innerText = "Viewport height is " + height;
     }
