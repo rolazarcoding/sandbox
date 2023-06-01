@@ -20,7 +20,7 @@
     </ul>
   </div>
   <script>
-    document.addEventListener( "onresize", ()=>console.log("resized") );
+    window.addEventListener( "onresize", ()=>console.log("resized") );
     const sandbox = document.getElementById( "sandbox" );
     console.log( sandbox.getBoundingClientRect().height );
   </script>
