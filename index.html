@@ -21,6 +21,8 @@
   </div>
   <script>
     window.onresize = ()=>console.log("resized");
+    const listItems = document.querySelectorAll( "li" );
+    console.log( listItems );
     const sandbox = document.getElementById( "sandbox" );
     console.log( sandbox.getBoundingClientRect().height );
   </script>
