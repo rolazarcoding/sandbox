@@ -47,7 +47,7 @@
       <li></li>
     </ul>
   </span>
-  <span id="lvh" style="height:100vh; width:33vw">
+  <span id="lvh" style="height:100lvh; width:33vw">
     <ul class="scrollable" style="font-size: xxx-large">
       <li></li>
       <li></li>
@@ -94,7 +94,7 @@
       <li></li>
     </ul>
   </span>
-  <span id="svh" style="height:100vh; width:33vw">
+  <span id="svh" style="height:100svh; width:33vw">
     <ul class="scrollable" style="font-size: xxx-large">
       <li></li>
       <li></li>
@@ -159,17 +159,17 @@
     }
     
     function mapToVh( element, _index, _array ) {
-      const height = vh.getBoundingClientRect().height;
+      const height = Math.trunc( vh.getBoundingClientRect().height );
       element.innerText = "Viewport height is " + height;
     }
     
     function mapToLvh( element, _index, _array ) {
-      const height = lvh.getBoundingClientRect().height;
+      const height = Math.trunc( lvh.getBoundingClientRect().height );
       element.innerText = "Large viewport height is " + height;
     }
     
     function mapToSvh( element, _index, _array ) {
-      const height = svh.getBoundingClientRect().height;
+      const height = Math.trunc( svh.getBoundingClientRect().height );
       element.innerText = "Small viewport height is " + height;
     }
   </script>
